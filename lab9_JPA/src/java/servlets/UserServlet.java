@@ -34,8 +34,10 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
+        
         UserService us = new UserService();
         RoleService rs = new RoleService();
+        
         RoleDB roleDB = new RoleDB();
         String action = request.getParameter("action");
         String userPrimaryKey = "";
